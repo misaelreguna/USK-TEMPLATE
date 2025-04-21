@@ -39,18 +39,18 @@
                     <button data-modal-target="topup-modal" data-modal-toggle="topup-modal" type="button" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         TopUp
                       </button>
-                      <button class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                      <button data-modal-target="transfer-modal" data-modal-toggle="transfer-modal"  class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         Transfer
                       </button>
-                      <button class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                      <button data-modal-target="tariktunai-modal" data-modal-toggle="tariktunai-modal" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         Withdraw
                       </button>
-                      <button class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        export  
-                      </button>
+                      <a href="">
+                        <div class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            export  
+                          </div>
+                      </a>
                 </div>
-                
-
                 </div>
                 
     </div>
@@ -63,7 +63,7 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Tanngal
+                    Tanggal
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Nama
@@ -153,6 +153,99 @@
 </div>
 <!-- End Modals TopUp -->
 
+<!-- Modals Tarik Tunai  -->
+<div id="tariktunai-modal" tabindex="-1" aria-hidden="true"
+class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div class="relative p-4 w-full max-w-md max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <!-- Modal header -->
+        <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                Tarik Tunai
+            </h3>
+            <button type="button"
+                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="tariktunai-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5">
+            <form class="space-y-4" action="">
+                <div>
+                    <label for="amount"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Masukkan
+                        Nominal</label>
+                    <input type="number" name="amount" id="amount" placeholder="Example:10000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        required />
+                </div>
+                <button type="submit"
+                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tarik
+                    Tunai</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End Modals Tarik Tunai -->
+
+<!-- Modals Transfer User  -->
+<div id="transfer-modal" tabindex="-1" aria-hidden="true"
+class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div class="relative p-4 w-full max-w-md max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <!-- Modal header -->
+        <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                Transfer Antar Siswa
+            </h3>
+            <button type="button"
+                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="transfer-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5">
+            <form class="space-y-4" action="" >
+                <label for="receiver"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Siswa
+                    Penerima:</label>
+                <select name="receiver_id" required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                            <option value="">Misael</option>
+                </select>
+                <div>
+                    <label for="amount"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Masukkan
+                        Nominal</label>
+                    <input type="number" name="amount" id="amount" placeholder="Example:10000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        required />
+                </div>
+                <button type="submit"
+                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Transfer</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End Modals Transfer User -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
   
